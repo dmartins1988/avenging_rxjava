@@ -10,7 +10,7 @@ import java.util.List;
  * Model for Comic
  */
 
-class Comic implements Serializable {
+public class Comic implements Serializable {
 
     @Expose
     @SerializedName("id")

@@ -13,6 +13,8 @@ android {
         buildConfigField("String", "PUBLIC_KEY", "f6ef3bb5958d267c5cb9629577858fff")
         buildConfigField("String", "PRIVATE_KEY", "bfd4e61c884dd7b8cda460b57149ba84c5775de9")
 
+        buildConfigField("String", "BASE_URL", "http://gateway.marvel.com/v1/public/")
+
     }
 
     compileOptions {
