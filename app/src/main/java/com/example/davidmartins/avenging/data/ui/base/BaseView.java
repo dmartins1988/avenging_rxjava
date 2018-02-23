@@ -4,7 +4,7 @@ package com.example.davidmartins.avenging.data.ui.base;
  * Base interface that any class that wants to act as a View in MVP
  */
 
-interface BaseView {
+public interface BaseView {
 
     void showProgress();
 
