@@ -80,6 +80,22 @@ public class DataManager {
         return mAvengersService.getCharacter(characterId, BuildConfig.PUBLIC_KEY, buildMD5AuthParameter(timeStamp), timeStamp);
     }
 
+    public Observable<CharacterDataWrapper<List<Comic>>> getComics(long characterId, int offset, int limit) {
+        return getComicListByType(characterId, COMIC_TYPE_COMICS, offset, limit);
+    }
+
+    public Observable<CharacterDataWrapper<List<Comic>>> getSeries(long characterId, int offset, int limit) {
+        return getComicListByType(characterId, COMIC_TYPE_SERIES, offset, limit);
+    }
+
+    public Observable<CharacterDataWrapper<List<Comic>>> getStories(long characterId, int offset, int limit) {
+        return getComicListByType(characterId, COMIC_TYPE_STORIES, offset, limit);
+    }
+
+    public Observable<CharacterDataWrapper<List<Comic>>> getEvents(long characterId, int offset, int limit) {
+        return getComicListByType(characterId, COMIC_TYPE_EVENTS, offset, limit);
+    }
+
     private Observable<CharacterDataWrapper<List<Comic>>> getComicListByType(long characterId, String comicType, int offset, int limit) {
         long timeStamp = System.currentTimeMillis();
         return mAvengersService.getCharacterComics(characterId, comicType, offset, limit, buildMD5AuthParameter(timeStamp), timeStamp);
