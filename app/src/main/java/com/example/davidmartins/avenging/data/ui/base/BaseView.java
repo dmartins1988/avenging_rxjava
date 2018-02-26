@@ -14,7 +14,7 @@ public interface BaseView {
 
     void showEmpty();
 
-    void showErrorLayout(boolean isShown);
+    void showMessageLayout(boolean isShown);
 
 }
 
